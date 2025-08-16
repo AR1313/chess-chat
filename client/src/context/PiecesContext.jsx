@@ -9,12 +9,11 @@ export const PiecesProvider = ({ children }) => {
 
     const [pieces, setPieces] = useState([])
 
-
     useEffect(() => {
 
         async function fetchPieces() {
             try {
-                const res = await axios.get("http://localhost:8080/api/chess-pieces")
+                const res = await axios.get(`${API_URL}/api/chess-pieces`)
                 setPieces(res.data)
             }
             catch (err) {
