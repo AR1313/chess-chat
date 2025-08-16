@@ -1,7 +1,7 @@
 import Square from './Square';
 import '../styles/Board.css';
 
-export default function Board(pieces) {
+export default function Board({ pieces }) {
     const squares = [];
 
 

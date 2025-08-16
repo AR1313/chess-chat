@@ -2,7 +2,7 @@ import { usePieces } from "../context/PiecesContext.jsx";
 import chessIcons from '../assets/chessIcons.js'
 import { cornerRounding } from '../utils/ui.js'
 
-export default function Square({ color, coord, rounded, piece }) {
+export default function Square({ color, coord }) {
 
     const corner = cornerRounding(coord)
     const icons = chessIcons
