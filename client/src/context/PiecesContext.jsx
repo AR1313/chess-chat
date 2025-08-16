@@ -8,7 +8,7 @@ const PiecesContext = createContext([]);
 // Provider component
 export const PiecesProvider = ({ children }) => {
 
-    const [pieces, setPieces] = useState([])
+    const [pieces, setPieces] = useState({})
 
     useEffect(() => {
 
