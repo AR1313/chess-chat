@@ -4,26 +4,50 @@
 }
 
 .board {
+    width: 80vmin;
+    /* 80% of the smaller viewport dimension */
+    max-width: 97%;
+    /* optional upper limit */
+    aspect-ratio: 1 / 1;
+    /* keeps it square */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: auto;
+    /* center it */
+    border: 3px solid red;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 
+.board {
     max-width: 97%;
     max-height: 97%;
 
     /* keep board square and fit container */
-    aspect-ratio: 1 / 1;
+/* aspect-ratio: 1 / 1;
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
 
-    margin: auto;
-    /* center board inside container */
+    margin: auto; */
+/* center board inside container */
 
 
-    border: 3px solid red;
+/* border: 3px solid red; */
 
-}
-
-
-.square {
+/* } */
+*/ .square {
     width: 100%;
     height: 100%;
     aspect-ratio: 1 / 1;
