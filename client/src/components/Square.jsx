@@ -10,6 +10,9 @@ export default function Square({ color, coord }) {
     if (pieces.hasOwnProperty(coord)) {
         console.log(coord, pieces[coord], icons[pieces[coord]?.name]);
     }
+    else {
+        console.log("PIECES: ", pieces)
+    }
 
     return (
         <div
