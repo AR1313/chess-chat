@@ -8,7 +8,8 @@ import { Server } from "socket.io";
 const app = express()
 app.use(express.json());
 
-const corsOptions = { origin: ["http://localhost:5173"] }
+const corsOptions = { origin: ["http://localhost:5173", "https://chess-chat.vercel.app"] }
+const PORT = process.env.PORT || 8080;
 
 app.use(cors(corsOptions))
 
@@ -88,9 +89,13 @@ io.on("connection", socket => {
 
 })
 
-httpServer.listen(8080, () => {
-    console.log("Server started on post 8080")
-})
+httpServer.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+});
+
+// httpServer.listen(8080, () => {
+//     console.log("Server started on post 8080")
+// })
 
 
 

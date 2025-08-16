@@ -8,6 +8,7 @@ import axios from "axios"
 import { socket } from './socket';
 import Invite from './components/Invite.jsx'
 import { log } from './utils/logic.js'
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
 
@@ -70,7 +71,7 @@ function App() {
 
     async function fetchMessages() {
       try {
-        const res = await axios.get("http://localhost:8080/api/messageHistory")
+        const res = await axios.get(`${API_URL}/api/messageHistory`);
         setMessages(res.data)
       }
       catch (err) {
