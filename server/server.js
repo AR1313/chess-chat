@@ -8,7 +8,6 @@ import { Server } from "socket.io";
 const app = express()
 app.use(express.json());
 
-// const corsOptions = { origin: ["http://localhost:5173", "chess-chat-virid.vercel.app"] }
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin) return callback(null, true); // allow non-browser requests like Postman
@@ -19,7 +18,7 @@ const corsOptions = {
             callback(new Error("Not allowed by CORS"));
         }
     },
-    credentials: true, // if you plan to send cookies
+    credentials: true, //to send cookies
 };
 
 const PORT = process.env.PORT || 8080;

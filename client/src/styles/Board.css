@@ -15,7 +15,6 @@
     grid-template-rows: repeat(8, 1fr);
     margin: auto;
     /* center it */
-    border: 3px solid red;
 }
 
 html,
@@ -27,25 +26,6 @@ body,
     padding: 0;
 }
 
-/* 
-.board {
-    max-width: 97%;
-    max-height: 97%;
-
-    /* keep board square and fit container */
-/* aspect-ratio: 1 / 1;
-
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-
-    margin: auto; */
-/* center board inside container */
-
-
-/* border: 3px solid red; */
-
-/* } */
 .square {
     width: 100%;
     height: 100%;
