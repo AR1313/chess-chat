@@ -33,6 +33,7 @@ io.on("connection", socket => {
 
         //check if invalid room code
         if (!roomCode || roomCode.length !== 5 || roomCodes.hasOwnProperty(roomCode)) {
+            console.log("COULDNT ROOM: ", roomCode)
             return log(new Error("Invalid room code generated"));
         }
 
@@ -40,6 +41,7 @@ io.on("connection", socket => {
         socket.join(roomCode);
         roomCodes[roomCode] = 1
         log(null, "Opened new room successfully");
+        console.log("OPENED ROOM: ", roomCode)
         socket.emit("opened-room", roomCode)
     })
 
@@ -56,7 +58,7 @@ io.on("connection", socket => {
         socket.join(roomCode);
         roomCodes[roomCode]++
         log(null, "Joined room successfully");
-        io.to(roomCode).emit("joined-room", 'started', roomCode)
+        io.in(roomCode).emit("joined-room", 'started', roomCode)
     });
 
 
@@ -78,16 +80,16 @@ io.on("connection", socket => {
 
         socket.to(msgObj.roomCode).emit('receive-message', recipientObj)
     })
-
-    app.get('/api/chess-pieces', (req, res) => {
-        res.status(200).send(pieces)
-    })
-
-    app.get('/api/messageHistory', (req, res) => {
-        res.status(200).send(messages)
-    })
-
 })
+
+app.get('/api/chess-pieces', (req, res) => {
+    res.status(200).send(pieces)
+})
+
+app.get('/api/messageHistory', (req, res) => {
+    res.status(200).send(messages)
+})
+
 
 httpServer.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
