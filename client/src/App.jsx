@@ -5,10 +5,12 @@ import Chat from './components/Chat.jsx'
 import NavBar from './components/NavBar.jsx'
 import { PiecesProvider } from "./context/PiecesContext.jsx";
 import axios from "axios"
-import { socket } from './socket';
+import { socket } from './socket.js';
 import Invite from './components/Invite.jsx'
 import { log } from './utils/logic.js'
 const API_URL = import.meta.env.VITE_API_URL;
+
+console.log("Connecting to:", import.meta.env.VITE_SOCKET_URL);
 
 function App() {
 
@@ -36,9 +38,12 @@ function App() {
     }
 
     const openedRoomHandler = (code) => {
+      console.log("OPENED ROOM HANDLER")
       setError("")
       setRoomCode(code)
+
       setGameStatus("waiting")
+      console.log(gameStatus)
     }
 
     const err_joinedRoomHandler = (msg) => {
