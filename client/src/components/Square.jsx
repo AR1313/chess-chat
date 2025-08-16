@@ -1,0 +1,24 @@
+import { usePieces } from "../context/PiecesContext.jsx";
+import chessIcons from '../assets/chessIcons.js'
+import { cornerRounding } from '../utils/ui.js'
+
+export default function Square({ color, coord, rounded, piece }) {
+
+    const corner = cornerRounding(coord)
+    const icons = chessIcons
+    const pieces = usePieces();
+
+    return (
+        <div
+            className={`square ${color}`}
+            role="gridcell"
+            aria-label={coord}
+            style={{ borderRadius: corner }}>
+            {
+                pieces.hasOwnProperty(coord) &&
+                <img src={icons[pieces[coord].name]} />
+
+            }
+        </div>
+    );
+}

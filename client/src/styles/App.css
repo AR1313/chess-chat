@@ -1,0 +1,43 @@
+#root {
+  margin: 0 auto;
+  padding: 0rem 1rem 2rem 2rem;
+}
+
+div.game {
+  /* height: 80vh;
+  display: flex; */
+  /* horizontal layout by default */
+}
+
+div.board-container {
+  display: flex;
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* center vertically */
+  width: 65%;
+  min-width: 400px;
+  /* rectangle width */
+  height: 90vh;
+  /* rectangle height */
+  /* max-width: 1000px; */
+  /* optional max size */
+  /* max-height: 1000px; */
+  /* optional max size */
+  background-color: #0F1731;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+div.content {}
+
+div.game {}
+
+div.board {}
+
+div.chat {}
+
+div.messages {}
+
+div.send-messages {}

@@ -1,0 +1,29 @@
+    /* Navbar.css */
+    .navbar {
+        /* overflow: hidden; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .navbar-container div {
+        /* position: fixed; */
+        padding: 1rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #080D1D;
+    }
+
+    .navbar-links a {
+        color: white;
+        text-align: center;
+        /* padding: 14px 16px; */
+        text-decoration: none;
+    }
+
+    .navbar-links a:hover {
+        background-color: #ddd;
+        color: black;
+    }

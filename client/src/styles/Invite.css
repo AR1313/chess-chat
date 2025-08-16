@@ -1,0 +1,65 @@
+.invite-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invite-container h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.invite-button {
+    padding: 10px 18px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.invite-button:hover {
+    background-color: #45a049;
+}
+
+.invite-code {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    padding: 6px 12px;
+    background: #e9ecef;
+    color: black;
+    border-radius: 6px;
+}
+
+.invite-or {
+    margin: 10px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.invite-input {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+.invite-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
