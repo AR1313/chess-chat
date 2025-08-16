@@ -16,6 +16,9 @@
 
     margin: auto;
     /* center board inside container */
+
+    /*DELETE*/
+    border: 1px solid red;
 }
 
 
